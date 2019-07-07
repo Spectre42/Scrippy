@@ -1,0 +1,57 @@
+{
+  "manifest_version": 2,
+  "name": "Scrippy",
+  "version": "3.0.0",
+  "author": "@Lmnoppy",
+  "homepage_url": "https://scrippy.click",
+  "description": "Scrippy - Right click hacks: its not, it just stores statements for you in a simple (very basic) UI and Right click context menu.",
+  "icons": {
+    "16": "img/icons/scrippylogo16.png",
+    "32": "img/icons/scrippylogo32.png",
+    "48": "img/icons/scrippylogo48.png",
+    "64": "img/icons/scrippylogo64.png",
+    "128": "img/icons/scrippylogo128.png"
+  },
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "activeTab",
+    "storage",
+    "https://ajax.googleapis.com/"
+  ],
+  "browser_action": {
+    "default_icon": {
+      "16": "img/icons/scrippylogo16.png",
+      "32": "img/icons/scrippylogo32.png",
+      "48": "img/icons/scrippylogo48.png",
+      "64": "img/icons/scrippylogo64.png",
+      "128": "img/icons/scrippylogo128.png"
+    },
+    "default_title": "Scrippy",
+    "default_popup": "popup/popup.html"
+  },
+  "background": {
+    "scripts": [
+      "background/scrippy.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content/content.js"
+      ]
+    }
+  ],
+  "options_ui": {
+    "page": "options/options.html"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "web_accessible_resources": [
+    "img/icons/scrippylogo.png"
+  ]
+}
+

@@ -1,0 +1,9 @@
+body {
+    width: 98%;
+    height: 100%;
+}
+
+.optionsInputPadding  {
+    margin-bottom: 4px;
+    margin-left: 3px;
+}

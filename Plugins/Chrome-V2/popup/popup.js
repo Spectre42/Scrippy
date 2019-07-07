@@ -15,7 +15,7 @@ This file is part of Scrippy
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>
 ***************************************************************************/
-var url = chrome.extension.getURL("sqlpayloads.json");
+var url = chrome.extension.getURL("payloads.json");
 $(document).ready(function () {
     $('#moreSQLPayloads').DataTable({
         "ajax": url
